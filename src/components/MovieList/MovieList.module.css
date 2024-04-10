@@ -1,0 +1,10 @@
+/* MovieList.module.css */
+.movieList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}

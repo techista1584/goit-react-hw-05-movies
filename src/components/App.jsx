@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import { HomePage } from './pages/HomePage';
-import { MoviesPage } from './pages/MoviesPage';
-import { MovieDetailsPage } from './pages/MovieDetailsPage';
-import { Header } from './Header';
+import { HomePage } from './pages/Home/HomePage';
+import { MoviesPage } from './pages/Movies/MoviesPage';
+import { MovieDetailsPage } from './pages/Movie/MovieDetailsPage';
+import { Header } from './Header/Header';
 
 export const App = () => {
   return (

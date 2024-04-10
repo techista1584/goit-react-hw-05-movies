@@ -1,0 +1,39 @@
+/* MovieDetailsPage.module.css */
+.movieDetailsContainer {
+    display: flex;
+    margin: 20px;
+}
+
+.image {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.movieDetailsWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.goBackButton {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.goBackButton:hover {
+    background-color: #0056b3;
+}
+
+.goBackLink {
+    display: block;
+    margin-top: 50px;
+    text-decoration: none;
+}

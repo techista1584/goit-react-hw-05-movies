@@ -7,8 +7,7 @@ export const MovieList = ({ movies }) => {
         <ul className={css.movieList}>
             {movies.map(({id, title}) => (
             <MovieListItem key={id} id={id} title={title} />
-          ))}
-          
+          ))} 
         </ul>
     );
 };

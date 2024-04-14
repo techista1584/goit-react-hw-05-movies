@@ -3,9 +3,10 @@ import css from './Movies.module.css';
 import { fetchMovieByQuery } from 'api/api';
 import { useState } from 'react';
 import { MovieList } from 'components/MovieList/MovieList';
+import { Outlet } from 'react-router-dom';
 
 export const MoviesPage = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('movie');
   const [movies, SetMovies] = useState([]);
 
   const fetchMovies = async (event) => {
@@ -14,7 +15,7 @@ export const MoviesPage = () => {
       const movies = await fetchMovieByQuery(searchQuery);
       SetMovies(movies);
       console.log(movies);
-    } catch (error) {
+      } catch (error) {
       console.error(error);
     }
   };
@@ -28,7 +29,9 @@ export const MoviesPage = () => {
         />
         <button onClick={fetchMovies}>Search</button>
       </form>
-      <MovieList movies={movies}/>
+      <MovieList movies={movies} />
+      <Outlet/>
     </div>
+
   );
 };

@@ -1,0 +1,6 @@
+.castList {
+    flex-basis: 200px;
+    margin: 10px;
+    list-style-type: none;
+    text-align: center;
+}

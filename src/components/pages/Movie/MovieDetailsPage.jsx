@@ -1,11 +1,18 @@
-import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Suspense, useEffect, useState } from 'react';
+import { useParams, Link, useLocation, Outlet } from 'react-router-dom';
 import { fetchMovieDetails } from 'api/api';
 import css from './MovieDetailsPage.module.css';
 
-export const MovieDetailsPage = () => {
+  const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
+
+  const location = useLocation();
+  const backLink = location.state?.from ?? 'not-found';
+
+  // console.log("backLink", location.state.from);
+
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -26,7 +33,7 @@ export const MovieDetailsPage = () => {
 
   return (
     <>
-      <Link to="/movies" className={css.goBackLink}>
+      <Link to={backLink} className={css.goBackLink}>
         <button className={css.goBackButton}>⬅ Go back</button>
       </Link>
       <div className={css.movieDetailsContainer}>
@@ -50,8 +57,24 @@ export const MovieDetailsPage = () => {
               <span key={genre.id}> {genre.name}</span>
             ))}
           </p>
+          <hr />
         </div>
+      </div>
+      <div>
+        <h3>Additional Information</h3>
+        <Link to="cast" className={css.link}>
+          <button className={css.infoButton}>Cast</button>
+        </Link>
+        <Link to="reviews" className={css.link}>
+          <button className={css.infoButton}>Reviews</button>
+        </Link>
+        <hr />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet/>
+        </Suspense>
       </div>
     </>
   );
 };
+
+export default MovieDetailsPage;

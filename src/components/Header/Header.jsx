@@ -20,12 +20,12 @@ export const Header = () => {
                 >
                     Movies
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                     to="/movies/details"
                     className={({ isActive }) => (isActive ? css.linkActive : css.link)}
                 >
                     Movie Details
-                </NavLink>
+                </NavLink> */}
             </nav>
         </header>
     );

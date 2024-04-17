@@ -11,7 +11,7 @@ const MoviesPage = lazy(() => import('.//pages/Movies/MoviesPage'));
 const MovieDetailsPage = lazy(() => import('.//pages/Movie/MovieDetailsPage'));
 const NotFoundPage = lazy(() => import('.//pages/NotFoundPage'));
 const CastList = lazy(() => import('./CastList/CastList'));
-const ReviewsList = lazy(() => import('./ReviewsList/ReviewsList'));
+const ReviewsList = lazy(() => import('./Reviews/Reviews'));
 
 export const App = () => {
   return (

@@ -2,6 +2,7 @@ import { Suspense, useEffect, useState } from 'react';
 import { useParams, Link, useLocation, Outlet } from 'react-router-dom';
 import { fetchMovieDetails } from 'api/api';
 import css from './MovieDetailsPage.module.css';
+import Loader from 'Loader/Loader';
 
   const MovieDetailsPage = () => {
   const { movieId } = useParams();
@@ -28,7 +29,7 @@ import css from './MovieDetailsPage.module.css';
   }, [movieId]);
 
   if (!movieDetails) {
-    return <div>Loading...</div>;
+    return <div><Loader/></div>;
   }
 
   return (
@@ -69,7 +70,7 @@ import css from './MovieDetailsPage.module.css';
           <button className={css.infoButton}>Reviews</button>
         </Link>
         <hr />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader/>}>
           <Outlet/>
         </Suspense>
       </div>

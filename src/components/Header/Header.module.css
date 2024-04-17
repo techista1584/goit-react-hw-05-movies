@@ -2,7 +2,7 @@
 .header {
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 20px;
     font-weight:bold;
 }
 
@@ -33,7 +33,6 @@
 }
 
 .link:hover {
-    background-color: #c627278f;
     border-radius: 5px;
-    color: white;
+    color: #e72437;
 }

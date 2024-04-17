@@ -62,17 +62,20 @@ import Loader from 'Loader/Loader';
         </div>
       </div>
       <div>
-        <h3>Additional Information</h3>
-        <Link to="cast" className={css.link}>
-          <button className={css.infoButton}>Cast</button>
-        </Link>
-        <Link to="reviews" className={css.link}>
-          <button className={css.infoButton}>Reviews</button>
-        </Link>
+        <div className={css.buttonContainer}>
+          
+        <h3 className={css.header}>Additional Information</h3>
+          <Link to="cast" className={css.link}>
+            <button className={css.infoButton}>Cast</button>
+          </Link>
+          <Link to="reviews" className={css.link}>
+            <button className={css.infoButton}>Reviews</button>
+          </Link>
+        </div>
         <hr />
-        <Suspense fallback={<Loader/>}>
-          <Outlet/>
-        </Suspense>
+          <Suspense fallback={<Loader/>}>
+            <Outlet/>
+          </Suspense>
       </div>
     </>
   );

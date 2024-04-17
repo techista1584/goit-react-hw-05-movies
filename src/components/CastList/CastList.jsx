@@ -26,7 +26,7 @@ const CastList = () => {
     <>
       {cast.length !== 0 ? (
         <div>
-          <h2>Movie Cast</h2>
+          <h2 className={css.castHeader}>Movie Cast</h2>
           <ul className={css.castListContainer}>
             {cast.map(({ id, profile_path, original_name, name }) => (
               <CastListItem

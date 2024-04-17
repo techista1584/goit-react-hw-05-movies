@@ -16,7 +16,37 @@
     justify-content: center;
 }
 
-.goBackButton {
+.buttonContainer {
+    display: flex;
+    justify-content:left;
+    padding-top: 100px;
+
+    /* Center the buttons horizontally */
+    /* Add some space below the buttons */
+}
+
+.link {
+    display: inline-block;
+    align-content: center;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.header {
+    display: flex;
+    justify-content: left;
+    margin: 0 100px;
+    text-align: center;
+    line-height: 20px;;
+}
+
+.infoButton{
+    margin-right: 15px;;
+}
+
+.goBackButton,
+.infoButton {
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
@@ -31,7 +61,8 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.goBackButton:hover {
+.goBackButton:hover,
+.infoButton:hover {
     color: #faf5f4;
     background-color: rgb(184, 41, 41);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
@@ -42,3 +73,4 @@
     margin-top: 50px;
     text-decoration: none;
 }
+

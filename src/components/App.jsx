@@ -20,7 +20,7 @@ export const App = () => {
         <Route path="/goit-react-hw-05-movies/" element={<SharedLayout />}>
           <Route index element={<HomePage />}/>
           <Route path="/goit-react-hw-05-movies/movies" element={<MoviesPage />}/>
-          <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
+          <Route path="/goit-react-hw-05-movies/movies/:movieId" element={<MovieDetailsPage />}>
             <Route path="cast" element={<CastList />} />
             <Route path="reviews" element={<ReviewsList />} />
           </Route>

@@ -17,9 +17,9 @@ export const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
+        <Route path="/goit-react-hw-05-movies/" element={<SharedLayout />}>
           <Route index element={<HomePage />}/>
-          <Route path="/movies" element={<MoviesPage />}/>
+          <Route path="/goit-react-hw-05-movies/movies" element={<MoviesPage />}/>
           <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
             <Route path="cast" element={<CastList />} />
             <Route path="reviews" element={<ReviewsList />} />
